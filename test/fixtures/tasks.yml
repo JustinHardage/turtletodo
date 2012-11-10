@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rank: 1
+  name: MyString
+  createDate: 2012-11-10 14:04:06
+  closeDate: 2012-11-10 14:04:06
+  currentWorkLog: 1
+
+two:
+  rank: 1
+  name: MyString
+  createDate: 2012-11-10 14:04:06
+  closeDate: 2012-11-10 14:04:06
+  currentWorkLog: 1

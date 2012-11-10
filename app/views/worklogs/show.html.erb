@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Taskid:</b>
+  <%= @worklog.taskID %>
+</p>
+
+<p>
+  <b>Starttime:</b>
+  <%= @worklog.startTime %>
+</p>
+
+<p>
+  <b>Endtime:</b>
+  <%= @worklog.endTime %>
+</p>
+
+
+<%= link_to 'Edit', edit_worklog_path(@worklog) %> |
+<%= link_to 'Back', worklogs_path %>
