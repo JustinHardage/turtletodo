@@ -1,3 +1,4 @@
 class Task < ActiveRecord::Base
-  attr_accessible :closeDate, :createDate, :currentWorkLog, :name, :rank
+  attr_accessible :name, :rank
+  attr_protected :currentWorkLog, :createDate, :closeDate
 end

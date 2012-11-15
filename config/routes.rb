@@ -1,4 +1,6 @@
 Turtletodo::Application.routes.draw do
+  resources :users
+
   resources :worklogs
 
   resources :tasks
