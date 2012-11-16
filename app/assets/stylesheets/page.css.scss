@@ -1,0 +1,28 @@
+/**********************
+ colors */
+$bodyBgColor: blue;
+$contentBgColor: white;
+
+/**********************
+ elements */
+body {
+	text-align: center;
+	background-color: red;
+	background-color: $bodyBgColor;
+}
+
+/**********************
+ classes */
+
+/**********************
+ IDs */
+#pageID {
+	width: 80em;
+	margin: 1em auto;
+}
+
+#navbarID {
+	border: solid black 1px;
+}
+
+#contentID{}
