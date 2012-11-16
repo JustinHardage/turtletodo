@@ -7,6 +7,7 @@ $contentBgColor: white;
  elements */
 body {
 	text-align: center;
+	background-color: red; 
 	background-color: $bodyBgColor;
 }
 
@@ -15,7 +16,10 @@ body {
 
 /**********************
  IDs */
-#bodyID{}
+#bodyID {
+	width: 80em;
+	margin: 1em auto;
+}
 
 #navbarID {
 	border: solid black 1px;
