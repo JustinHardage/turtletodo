@@ -1,13 +1,12 @@
 /**********************
  colors */
-$bodyBgColor: blue;
+$bodyBgColor: #AA5555;
 $contentBgColor: white;
 
 /**********************
  elements */
 body {
 	text-align: center;
-	background-color: red;
 	background-color: $bodyBgColor;
 }
 
