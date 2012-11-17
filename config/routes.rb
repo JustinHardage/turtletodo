@@ -5,6 +5,8 @@ Turtletodo::Application.routes.draw do
 
   resources :tasks
 
+  map.root :controller => "tasks"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
