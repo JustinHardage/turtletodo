@@ -1,5 +1,6 @@
 Turtletodo::Application.routes.draw do
-  root :to => "tasks#index"
+  #root :to => "tasks#index"
+  root :to => redirect("/posts")
 
   resources :users
 
