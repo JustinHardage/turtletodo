@@ -80,7 +80,6 @@ class TasksController < ApplicationController
       format.json { head :no_content }
     end
   end
-end
 
   # hand written below here:
 
@@ -93,4 +92,4 @@ end
       format.json { render json: @tasks }
     end
   end
-
+end
