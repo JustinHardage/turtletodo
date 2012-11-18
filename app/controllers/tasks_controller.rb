@@ -81,3 +81,16 @@ class TasksController < ApplicationController
     end
   end
 end
+
+  # hand written below here:
+
+  # /tasks/openlist
+  def activelist
+    @tasks = Task.where('closeDate IS NOT NULL')
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @tasks }
+    end
+  end
+
