@@ -86,7 +86,7 @@ end
 
   # /tasks/openlist
   def activelist
-    @tasks = Task.where('closeDate IS NULL')
+    @tasks = Task.where('closeDate IS NULL') || Array.new
 
     respond_to do |format|
       format.html # index.html.erb
