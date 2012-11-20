@@ -11,16 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121115033642) do
+ActiveRecord::Schema.define(:version => 20121120034952) do
 
   create_table "tasks", :force => true do |t|
     t.integer  "rank"
     t.string   "name"
-    t.datetime "createDate"
-    t.datetime "closeDate"
-    t.integer  "currentWorkLog"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "create_date"
+    t.datetime "close_date"
+    t.integer  "current_work_log"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "users", :force => true do |t|

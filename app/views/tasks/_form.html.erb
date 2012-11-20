@@ -20,16 +20,16 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :createDate %><br />
-    <%= f.datetime_select :createDate %>
+    <%= f.label :create_date %><br />
+    <%= f.datetime_select :create_date %>
   </div>
   <div class="field">
-    <%= f.label :closeDate %><br />
-    <%= f.datetime_select :closeDate %>
+    <%= f.label :close_date %><br />
+    <%= f.datetime_select :close_date, :include_blank => true %>
   </div>
   <div class="field">
-    <%= f.label :currentWorkLog %><br />
-    <%= f.number_field :currentWorkLog %>
+    <%= f.label :current_work_log %><br />
+    <%= f.number_field :current_work_log %>
   </div>
   <div class="actions">
     <%= f.submit %>

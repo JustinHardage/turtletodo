@@ -16,9 +16,9 @@
   <tr>
     <td><%= task.rank %></td>
     <td><%= task.name %></td>
-    <td><%= task.createDate %></td>
-    <td><%= task.closeDate %></td>
-    <td><%= task.currentWorkLog %></td>
+    <td><%= task.create_date %></td>
+    <td><%= task.close_date %></td>
+    <td><%= task.current_work_log %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
