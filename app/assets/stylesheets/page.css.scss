@@ -33,16 +33,19 @@ h1 {
 	list-style-type: none;
 	margin: 0.5em auto;
 	padding: 0;
-	li {
-		margin: 0;
-		padding: 0;
-		display: inline;
-		a {
-			display: block;
-			width: 10em;
-			text-decoration: none;
-			background-color: $navbarColor;
-			border-radius: 0.4em;
+	div {
+		li {
+			float: left;
+			margin: 0;
+			padding: 0;
+			display: inline;
+			a {
+				display: block;
+				width: 10em;
+				text-decoration: none;
+				background-color: $navbarColor;
+				border-radius: 0.4em;
+			}
 		}
 	}
 }
