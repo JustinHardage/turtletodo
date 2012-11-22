@@ -10,7 +10,11 @@
 
 <div id="pageID">
 	<h1>Turtle To Do</h1>
-	<div id="navbarID">Open Tasks | Archived Tasks | Users</div>
+	<ul id="navbarID">
+		<li><a href="/activelist">Active Tasks</a></li>
+		<li><a href="/tasks">All Tasks</a></li>
+		<li><a href="/users">Users</a></li>
+	</ul>
 	<div id="contentID">
 		<%= yield %>
 	</div>
