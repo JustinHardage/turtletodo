@@ -36,12 +36,15 @@ h1 {
 	ul {
 		li {
 			float: left;
+			clear: both;
 			margin: 0;
 			padding: 0;
 			display: inline;
 			a {
 				display: block;
 				width: 10em;
+				padding: 0.3em;
+				margin: 0.2em;
 				text-decoration: none;
 				background-color: $navbarColor;
 				border-radius: 0.4em;
