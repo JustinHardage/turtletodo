@@ -3,6 +3,8 @@
 $bodyBgColor: #88BB55;
 $contentBgColor: white;
 $navbarColor: PaleGreen;
+$navbarHoverColor: Green;
+$navbarBorderColor: yellowgreen;
 /**********************
  elements */
 body {
@@ -43,10 +45,15 @@ h1 {
 				display: inline-block;
 				width: 10em;
 				padding: 0.3em 0.5em;
-				margin: 0.2em;
+				margin: 0.2em 0.1em;
 				text-decoration: none;
 				background-color: $navbarColor;
-				border-radius: 0.4em;
+				border: 0.2em outset $navbarBorderColor;
+				border-radius: 0.8em;
+
+				&:hover {
+					color: $navbarHoverColor;
+				}
 			}
 		}
 	}
