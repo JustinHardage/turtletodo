@@ -21,7 +21,7 @@ h1 {
 }
 
 table {
-	border-radius: 0.5em;
+	margin: 0.5em auto;
 	tr:nth-child(odd) {
 		background-color: $rowOdd;
 	} 
