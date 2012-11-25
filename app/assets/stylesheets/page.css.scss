@@ -9,6 +9,12 @@ $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
 
 /**********************
+ sizes */
+$padding: 0.5em;
+$margins: 1em auto;
+$borderRadius: 1em;
+
+/**********************
  elements */
 body {
 	text-align: center;
@@ -30,7 +36,7 @@ table {
 	}
 
 	tr {
-		td {
+		td, th {
 			padding: 0.5em;
 		}
 	}
