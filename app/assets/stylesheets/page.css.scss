@@ -5,6 +5,9 @@ $contentBgColor: white;
 $navbarColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
+$rowOdd: #B5EAAA;
+$rowEven: #C3FDB8;
+
 /**********************
  elements */
 body {
@@ -17,6 +20,16 @@ h1 {
 	font-family: Palatino, "Times New Roman", Serif;
 }
 
+table {
+	border-radius: 0.5em;
+	tr:nth-child(odd) {
+		background-color: $rowOdd;
+	} 
+	tr:nth-child(even) {
+		background-color: $rowEven;
+	}
+}
+
 /**********************
  classes */
 
@@ -26,8 +39,8 @@ h1 {
 	width: 80em;
 	margin: 1em auto;
 	padding: 1em;
-	border-radius: 0.5em;
-	-moz-border-radius: 0.5em;
+	border-radius: 1em;
+	-moz-border-radius: 1em;
 	background-color: $contentBgColor;
 }
 
