@@ -28,6 +28,12 @@ table {
 	tr:nth-child(even) {
 		background-color: $rowEven;
 	}
+
+	tr {
+		td {
+			padding: 0.5em;
+		}
+	}
 }
 
 /**********************
