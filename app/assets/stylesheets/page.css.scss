@@ -11,7 +11,7 @@ $rowEven: #DCFDC8;
 /**********************
  sizes */
 $padding: 0.5em;
-$margins: 1em auto;
+$margins: 0.5em auto;
 $borderRadius: 1em;
 
 /**********************
@@ -27,17 +27,12 @@ h1 {
 }
 
 table {
-	margin: 0.5em auto;
-	tr:nth-child(odd) {
-		background-color: $rowOdd;
-	} 
-	tr:nth-child(even) {
-		background-color: $rowEven;
-	}
-
+	margin: $margins;
+	tr:nth-child(odd) {background-color: $rowOdd;} 
+	tr:nth-child(even) {background-color: $rowEven;}
 	tr {
 		td, th {
-			padding: 0.5em;
+			padding: $padding;
 		}
 	}
 }
@@ -49,10 +44,10 @@ table {
  IDs */
 #pageID {
 	width: 80em;
-	margin: 1em auto;
+	margin: $margins;
 	padding: 1em;
-	border-radius: 1em;
-	-moz-border-radius: 1em;
+	border-radius: $borderRadius;
+	-moz-border-radius: $borderRadius;
 	background-color: $contentBgColor;
 }
 

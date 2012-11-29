@@ -83,7 +83,7 @@ class TasksController < ApplicationController
 
   # hand written below here:
 
-  # /tasks/openlist
+  # /tasks/activelist
   def activelist
     @tasks = Task.where('close_date IS NULL') || Array.new
 
@@ -91,5 +91,10 @@ class TasksController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @tasks }
     end
+  end
+
+  # PUT /tasks/1/punch
+  def punch
+    @task.punch
   end
 end
