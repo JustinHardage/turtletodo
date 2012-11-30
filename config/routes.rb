@@ -7,13 +7,17 @@ Turtletodo::Application.routes.draw do
 
   resources :worklogs
 
+  resources :tasks
+  match 'tasks/punch/:id' => 'tasks#punch'
+
   # resources
   # http://stackoverflow.com/questions/5634040/add-action-to-scaffold-generated-controller
-  resources :tasks do
-    collection do
-      get :punch
-    end
-  end
+  #resources :tasks do
+  #  collection do
+  #    get :punch
+  #  end
+  #end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
