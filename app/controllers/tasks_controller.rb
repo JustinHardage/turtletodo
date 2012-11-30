@@ -95,6 +95,7 @@ class TasksController < ApplicationController
 
   # PUT /tasks/1/punch
   def punch
+    @task = Task.find(params[:id])
     @task.punch
   end
 end
