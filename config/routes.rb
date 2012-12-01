@@ -8,7 +8,7 @@ Turtletodo::Application.routes.draw do
   resources :worklogs
 
   resources :tasks
-  match 'tasks/punch/:id' => 'tasks#punch'
+  match 'tasks/:id/punch' => 'tasks#punch', :as => :tasks_punch
 
   # resources
   # http://stackoverflow.com/questions/5634040/add-action-to-scaffold-generated-controller
