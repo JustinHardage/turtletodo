@@ -97,5 +97,9 @@ class TasksController < ApplicationController
   def punch
     @task = Task.find(params[:id])
     @task.punch
+
+    respond_to do |format|
+      format.json {render json: @task }
+    end
   end
 end
