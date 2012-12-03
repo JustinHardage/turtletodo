@@ -1,5 +1,9 @@
 <h1>Active Tasks</h1>
 
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
 <table>
   <tr>
     <th>Rank</th>
