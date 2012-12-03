@@ -98,9 +98,6 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.punch
 
-    respond_to do |format|
-      format.html
-      format.json {render json: @task }
-    end
+    redirect_to :controller => 'tasks', :action => 'activelist', :id => @task.id
   end
 end
