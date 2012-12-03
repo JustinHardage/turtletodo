@@ -99,7 +99,7 @@ class TasksController < ApplicationController
     @task.punch
 
     respond_to do |format|
-      format.html { notice: 'Punch was successfully processed.' }
+      format.html
       format.json {render json: @task }
     end
   end
