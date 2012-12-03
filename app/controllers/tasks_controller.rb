@@ -98,6 +98,6 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.punch
 
-    redirect_to :controller => 'tasks', :action => 'activelist', :id => @task.id, :notice => "Task #" + @task.id + " successfully punched!"
+    redirect_to :controller => 'tasks', :action => 'activelist', :id => params[:id], :notice => "Task #" + @task.id + " successfully punched!"
   end
 end
