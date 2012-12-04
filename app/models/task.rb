@@ -13,11 +13,15 @@ class Task < ActiveRecord::Base
     is_punched_in? ? punch_out : punch_in
   end
 
+  def is_punched_out?
+    :current_work_log.nil?
+  end
+
   def is_punched_in?
     # a more accurate method might be 
     # SELECT close_date FROM worklog WHERE id = task.id 
     # ORDER BY open_date DESC LIMIT 1
-    !:current_work_log.nil?
+    !is_punched_out?
   end
 
   def get_punch_direction
