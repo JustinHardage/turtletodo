@@ -25,7 +25,7 @@ class Task < ActiveRecord::Base
   end
 
   def get_punch_direction
-    is_punched_out? ? "In" : "Out"
+    (is_punched_out? ? "In" : "Out") + is_punched_out?.to_s
   end
 
 end
