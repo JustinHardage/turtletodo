@@ -20,9 +20,7 @@
     <td><%= task.name %></td>
     <td><%= task.create_date %></td>
     <td><%= task.close_date %></td>
-<% value = task.current_work_log.nil? ? 'nil' : '' %>
-<% value += task.current_work_log.blank? ? 'blank' : '' %>
-    <td><%= task.current_work_log.to_s + value %></td>
+    <td><%= task.current_work_log %></td>
     <td><%= link_to 'Punch ' + task.get_punch_direction, punch_task_path(task) %></td> 
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
