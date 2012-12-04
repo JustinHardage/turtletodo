@@ -14,7 +14,7 @@ class Task < ActiveRecord::Base
   end
 
   def is_punched_out?
-    !:current_work_log
+    :current_work_log.nil? or :current_work_log.blank? or :current_work_log.empty?
   end
 
   def is_punched_in?
@@ -25,7 +25,7 @@ class Task < ActiveRecord::Base
   end
 
   def get_punch_direction
-    (is_punched_out? ? "In" : "Out") + is_punched_out?.to_s
+    is_punched_out? ? "In" : "Out"
   end
 
 end
