@@ -17,6 +17,9 @@
 			<li><a href="/users">Users</a></li>
 		</ul>
 	</div>
+	<div id="noticeID">
+		<%= flash[:notice] or "flash notice empty"  %>
+	</div>
 	<div id="contentID">
 		<%= yield %>
 	</div>
