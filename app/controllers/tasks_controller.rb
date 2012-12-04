@@ -99,7 +99,7 @@ class TasksController < ApplicationController
     @task.punch
 
     flash[:notice] = "Task #" + @task.id.to_s + " successfully punched!"
-    render '/'
-    # redirect_to :controller => 'tasks', :action => 'activelist', :id => @task.id
+   
+    redirect_to :controller => 'tasks', :action => 'activelist'
   end
 end
