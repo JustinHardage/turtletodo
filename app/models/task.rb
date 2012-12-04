@@ -14,7 +14,7 @@ class Task < ActiveRecord::Base
   end
 
   def is_punched_out?
-    :current_work_log.empty?
+    :current_work_log.empty? or :current_work_log.blank? or :current_work_log.nil?
   end
 
   def is_punched_in?
