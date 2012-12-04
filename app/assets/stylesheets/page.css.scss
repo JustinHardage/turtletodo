@@ -84,7 +84,8 @@ table {
 }
 
 #noticeID {
-	border: solid 1px $navbarHoverColor;
+	background-color: $navbarHoverColor;
 	border-radius: $borderRadius;
 	margin: $margins;
+	width: 30em;
 }
