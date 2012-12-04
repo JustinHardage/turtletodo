@@ -82,3 +82,8 @@ table {
 #contentID {
 	text-align: center;
 }
+
+#noticeID {
+	border: solid 1px $navbarHoverColor;
+	border-radius: $borderRadius;
+}
