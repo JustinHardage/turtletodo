@@ -85,8 +85,7 @@ table {
 }
 
 #noticeID {
-	background-color: $navbarHoverColor;
-	color: $lightTextColor;
+	border: 0.3em solid $navbarHoverColor;
 	border-radius: $borderRadius;
 	padding: $padding;
 	margin: $margins;
