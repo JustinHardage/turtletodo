@@ -20,9 +20,9 @@
     <td><%= task.name %></td>
     <td><%= task.create_date %></td>
     <td><%= task.close_date %></td>
-<% value = task.current_work_log.nil? ? 'nil' : task.current_work_log %>
-<% value += task.current_work_log.empty? ? 'empty' : task.current_work_log %>
-<% value += task.current_work_log.blank? ? 'blank' : task.current_work_log %>
+<% value = task.current_work_log.nil? ? 'nil' : task.current_work_log.to_s %>
+<% value += task.current_work_log.empty? ? 'empty' : task.current_work_log.to_s %>
+<% value += task.current_work_log.blank? ? 'blank' : task.current_work_log.to_s %>
     <td><%= task.current_work_log + value %></td>
     <td><%= link_to 'Punch ' + task.get_punch_direction, punch_task_path(task) %></td> 
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
