@@ -2,6 +2,7 @@
  colors */
 $bodyBgColor: #88BB55;
 $contentBgColor: white;
+$lightTextColor: white;
 $navbarColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
@@ -85,7 +86,9 @@ table {
 
 #noticeID {
 	background-color: $navbarHoverColor;
+	color: $lightTextColor;
 	border-radius: $borderRadius;
+	padding: $padding;
 	margin: $margins;
 	width: 30em;
 }
