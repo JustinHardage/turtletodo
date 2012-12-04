@@ -18,11 +18,6 @@
 		</ul>
 	</div>
 	<hr />
-	<% if flash[:notice] %>
-	<div id="noticeID">
-		<%= flash[:notice] or "flash notice empty"  %>
-	</div>
-	<% end %>
 	<div id="contentID">
 		<%= yield %>
 	</div>
