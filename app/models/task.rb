@@ -26,7 +26,9 @@ class Task < ActiveRecord::Base
     current_work_log.nil?
   end
 
-  
+  def is_punched_in?
+    !is_punched_out?
+  end
 
   def get_punch_direction
     is_punched_out? ? "In" : "Out"
