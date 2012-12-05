@@ -4,9 +4,9 @@ class Task < ActiveRecord::Base
 
   def punch_in
     newlog = self.worklogs.build(:start_time => DateTime.now)
-    current_work_log = newlog.id or 1
+    self.current_work_log = newlog.id or 1
     newlog.save
-    save
+    self.save
   end
 
   def punch_out
