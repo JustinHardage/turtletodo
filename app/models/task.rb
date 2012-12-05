@@ -1,12 +1,21 @@
 class Task < ActiveRecord::Base
   attr_accessible :name, :rank, :current_work_log, :create_date, :close_date
+  has_many :worklogs
 
   def punch_in
-    true
+    newlog = self.worklogs.build(:start_time => DateTime.now)
+    self.current_work_log = newlog.id
+    newlog.save
+    self.save
   end
 
   def punch_out
-    true
+    # throw exception if :current_work_log doesn't exist?
+    oldlog = Worklog.find(:current_work_log)
+    oldlog.end_time = DateTime.now
+    self.current_work_log = nil
+    oldlog.save
+    self.save
   end
 
   def punch
@@ -14,15 +23,10 @@ class Task < ActiveRecord::Base
   end
 
   def is_punched_out?
-    self.current_work_log.nil?
+    current_work_log.nil?
   end
 
-  def is_punched_in?
-    # a more accurate method might be 
-    # SELECT close_date FROM worklog WHERE id = task.id 
-    # ORDER BY open_date DESC LIMIT 1
-    !is_punched_out?
-  end
+  
 
   def get_punch_direction
     is_punched_out? ? "In" : "Out"
