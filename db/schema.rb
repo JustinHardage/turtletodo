@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121120034952) do
+ActiveRecord::Schema.define(:version => 20121205033420) do
 
   create_table "tasks", :force => true do |t|
     t.integer  "rank"
@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(:version => 20121120034952) do
   end
 
   create_table "worklogs", :force => true do |t|
-    t.integer  "taskID"
-    t.datetime "startTime"
-    t.datetime "endTime"
+    t.integer  "task_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
