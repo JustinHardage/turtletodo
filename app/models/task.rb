@@ -15,7 +15,7 @@ class Task < ActiveRecord::Base
     oldlog.end_time = DateTime.now
     current_work_log = nil
     oldlog.save
-    # save
+    save
   end
 
   def punch
