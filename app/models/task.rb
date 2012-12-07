@@ -13,7 +13,7 @@ class Task < ActiveRecord::Base
     # throw exception if :current_work_log doesn't exist?
     oldlog = Worklog.find(current_work_log)
     oldlog.end_time = DateTime.now
-    self.urrent_work_log = nil
+    self.current_work_log = nil
     oldlog.save
     self.save
   end
