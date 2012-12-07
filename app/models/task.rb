@@ -11,10 +11,8 @@ class Task < ActiveRecord::Base
 
   def punch_out
     # throw exception if :current_work_log doesn't exist?
-logger.debug('started punch_out')
     oldlog = Worklog.find(:current_work_log)
     oldlog.end_time = DateTime.now
-logger.debug('about to set work log to nil')
     current_work_log = nil
     oldlog.save
     save
