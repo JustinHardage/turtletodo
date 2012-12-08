@@ -73,7 +73,7 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
-    @task = Task.find(params[:id])
+    @task = Task.includes(:worklogs).find(params[:id])
     @task.destroy
 
     respond_to do |format|
