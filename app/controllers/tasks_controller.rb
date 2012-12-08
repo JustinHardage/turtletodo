@@ -105,7 +105,7 @@ class TasksController < ApplicationController
   end
 
   # PUT /tasks/1/punch
-  def punch
+  def close
     @task = Task.find(params[:id])
     @task.close
 
