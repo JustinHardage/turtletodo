@@ -3,11 +3,10 @@ class Worklog < ActiveRecord::Base
   belongs_to :task, :foreign_key => "task_id"
 
   def elapsed_time
-    if !self.start_time.nil? then
-      now = DateTime.now
-      self.end_time = self.end_time.nil? ? now : self.end_time 
-      # self.start_time = self.start_time.nil? ? now : self.start_time
-      end_time - start_time
-    end
+    if self.start_time.nil? then return nil end
+    now = DateTime.now
+    self.end_time = self.end_time.nil? ? now : self.end_time 
+    # self.start_time = self.start_time.nil? ? now : self.start_time
+    end_time - start_time
   end
 end
