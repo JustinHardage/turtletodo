@@ -2,8 +2,12 @@ class Task < ActiveRecord::Base
   attr_accessible :name, :rank, :current_work_log, :create_date, :close_date
   has_many :worklogs
 
-  def total_time
+  def total_days
     worklogs.sum(&:elapsed_time)
+  end
+
+  def total_time
+    (total_days * 24 * 60).truncate(2)
   end
 
   def punch_in
