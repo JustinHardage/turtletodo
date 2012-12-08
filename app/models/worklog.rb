@@ -4,9 +4,8 @@ class Worklog < ActiveRecord::Base
 
   def elapsed_time
     if self.start_time.nil? then return 0 end
-    now = DateTime.now
-    self.end_time = self.end_time.nil? ? now : self.end_time 
+    self.end_time = self.end_time.nil? ? DateTime.now : self.end_time 
     # self.start_time = self.start_time.nil? ? now : self.start_time
-    end_time - start_time
+    ((end_time - start_time) / 60).truncate
   end
 end
