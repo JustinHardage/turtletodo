@@ -103,4 +103,15 @@ class TasksController < ApplicationController
    
     redirect_to :controller => 'tasks', :action => 'activelist'
   end
+
+  # PUT /tasks/1/punch
+  def punch
+    @task = Task.find(params[:id])
+    @task.close
+
+    flash[:notice] = "Task #" + @task.id.to_s + " successfully closed!"
+   
+    redirect_to :controller => 'tasks', :action => 'activelist'
+  end
+
 end

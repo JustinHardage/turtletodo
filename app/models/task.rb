@@ -10,6 +10,12 @@ class Task < ActiveRecord::Base
     total_days
   end
 
+  def close
+    if is_punched_in? then punch_out end
+    close_time = DateTime.now
+    save
+  end
+
   def punch_in
     newlog = self.worklogs.build(:start_time => DateTime.now)
     newlog.save
