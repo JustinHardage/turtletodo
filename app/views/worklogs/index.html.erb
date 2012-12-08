@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Taskid</th>
+    <th>Task Id</th>
     <th>Starttime</th>
     <th>Endtime</th>
     <th></th>
@@ -12,7 +12,7 @@
 
 <% @worklogs.each do |worklog| %>
   <tr>
-    <td><%= worklog.taskID %></td>
+    <td><%= worklog.task_id %></td>
     <td><%= worklog.startTime %></td>
     <td><%= worklog.endTime %></td>
     <td><%= link_to 'Show', worklog %></td>
