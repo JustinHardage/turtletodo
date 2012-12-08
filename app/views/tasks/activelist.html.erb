@@ -20,8 +20,8 @@
   <tr>
     <td><%= task.rank %></td>
     <td><%= task.name %></td>
-    <td><%= task.create_date %></td>
-    <td><%= task.close_date %></td>
+    <td><%= l task.create_date, :format => :short %></td>
+    <td><%= l task.close_date, :format => :long %></td>
     <td><%= task.current_work_log %></td>
     <td><%= task.total_time %></td>
     <td><%= link_to 'Punch ' + task.get_punch_direction, punch_task_path(task) %></td>
