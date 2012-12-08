@@ -6,7 +6,6 @@ class Worklog < ActiveRecord::Base
     self.end_time = self.end_time.nil? ? DateTime.now : self.end_time
     self.start_time = self.start_time.nil? ? DateTime.now : self.start_time
     # self.end_time - self.start_time
-    test_time = DateTime.now
-    test_time - test_time
+    end_time - start_time
   end
 end
