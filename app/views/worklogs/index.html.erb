@@ -15,6 +15,7 @@
     <td><%= worklog.task_id %></td>
     <td><%= worklog.start_time %></td>
     <td><%= worklog.end_time %></td>
+    <td><%= worklog.elapsed_time %></td>
     <td><%= link_to 'Show', worklog %></td>
     <td><%= link_to 'Edit', edit_worklog_path(worklog) %></td>
     <td><%= link_to 'Destroy', worklog, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
   has_many :worklogs
 
   def total_time
-    worklogs.sum(&:total_time)
+    worklogs.sum(&:elapsed_time)
   end
 
   def punch_in
