@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>Task Id</th>
-    <th>Starttime</th>
-    <th>Endtime</th>
+    <th>Task id</th>
+    <th>Start time</th>
+    <th>End time</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +13,8 @@
 <% @worklogs.each do |worklog| %>
   <tr>
     <td><%= worklog.task_id %></td>
-    <td><%= worklog.startTime %></td>
-    <td><%= worklog.endTime %></td>
+    <td><%= worklog.start_time %></td>
+    <td><%= worklog.end_time %></td>
     <td><%= link_to 'Show', worklog %></td>
     <td><%= link_to 'Edit', edit_worklog_path(worklog) %></td>
     <td><%= link_to 'Destroy', worklog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
