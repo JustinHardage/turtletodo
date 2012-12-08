@@ -21,7 +21,7 @@
     <td><%= task.name %></td>
     <td><%= task.create_date %></td>
     <td><%= task.close_date %></td>
-    <td><%= task.current_work_log %></td>
+    <td><a href="<%= edit_worklog_path(task.current_work_log) %>"><%= task.current_work_log %></a></td>
     <td><%= task.total_time %></td>
     <td><%= link_to 'Punch ' + task.get_punch_direction, punch_task_path(task) %></td> 
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
