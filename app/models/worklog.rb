@@ -3,9 +3,9 @@ class Worklog < ActiveRecord::Base
   belongs_to :task, :foreign_key => "task_id"
 
   def elapsed_days
-    self.end_time = self.end_time.nil? ? DateTime.now : self.end_time 
-    self.start_time = self.start_time.nil? ? DateTime.now : self.start_time
-    # self.end_time - self.start_time
+    now = DateTime.now
+    self.end_time = self.end_time.nil? ? now : self.end_time 
+    self.start_time = self.start_time.nil? ? now : self.start_time
     end_time - start_time
   end
 
