@@ -2,7 +2,7 @@ class Task < ActiveRecord::Base
   attr_accessible :name, :rank, :current_work_log, :create_date, :close_date
   has_many :worklogs
 
-  def aggregate_work_time
+  def total_time
     worklogs.sum(&:total_time)
   end
 

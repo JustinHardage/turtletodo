@@ -9,7 +9,7 @@
     <th>Create date</th>
     <th>Close date</th>
     <th>Current work log</th>
-    <th>Aggregate work time</th>
+    <th>Total time</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,8 +21,8 @@
     <td><%= task.name %></td>
     <td><%= task.create_date %></td>
     <td><%= task.close_date %></td>
-    <td><%= task.current_work_log %></td>
-    <td><%= task.aggregate_work_time %></td>
+    <td><%= link_to task.current_work_log, edit_worklog_path %></td>
+    <td><%= task.total_time %></td>
     <td><%= link_to 'Punch ' + task.get_punch_direction, punch_task_path(task) %></td> 
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
