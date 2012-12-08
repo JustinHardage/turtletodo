@@ -12,7 +12,7 @@ class Task < ActiveRecord::Base
 
   def close
     if is_punched_in? then punch_out end
-    close_time = DateTime.now
+    close_date = DateTime.now
     save
   end
 
