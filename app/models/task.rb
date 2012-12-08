@@ -7,7 +7,7 @@ class Task < ActiveRecord::Base
   end
 
   def total_time
-    total_days * 60 * 24
+    total_days / 60
   end
 
   def punch_in
