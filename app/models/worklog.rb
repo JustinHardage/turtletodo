@@ -5,6 +5,7 @@ class Worklog < ActiveRecord::Base
   def total_time
     self.end_time = self.end_time or DateTime.now
     self.start_time = self.start_time or DateTime.now
-    self.end_time - self.start_time
+    # self.end_time - self.start_time
+    DateTime.now - DateTime.now
   end
 end
