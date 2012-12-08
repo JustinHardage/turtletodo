@@ -7,7 +7,7 @@ class Task < ActiveRecord::Base
   end
 
   def total_time
-    (total_days / 60.0).truncate(2)
+    total_days
   end
 
   def punch_in
