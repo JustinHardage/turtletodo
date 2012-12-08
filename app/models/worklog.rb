@@ -3,7 +3,6 @@ class Worklog < ActiveRecord::Base
   belongs_to :task, :foreign_key => "task_id"
 
   def elapsed_days
-    if start_time.nil? then return nil
     # self.end_time = self.end_time.nil? ? DateTime.now : self.end_time
     self.start_time = self.start_time.nil? ? DateTime.now : self.start_time
     # self.end_time - self.start_time
