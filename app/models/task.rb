@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
   has_many :worklogs
 
   def total_days
-    worklogs.sum(&:elapsed_time)
+    worklogs.sum(&:elapsed_days)
   end
 
   def total_time
