@@ -2,8 +2,8 @@ class Task < ActiveRecord::Base
   attr_accessible :name, :rank, :current_work_log, :create_date, :close_date
   has_many :worklogs, :dependent => :destroy
 
-  def total_time
-    worklogs.sum(&:elapsed_time)
+  def total_hours
+    worklogs.sum(&:elapsed_hours)
   end
 
   def close
