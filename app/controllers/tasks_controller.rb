@@ -86,7 +86,7 @@ class TasksController < ApplicationController
 
   # /tasks/activelist
   def activelist
-    @tasks = Task.where('close_date IS NULL') || Array.new
+    @tasks = Task.includes(:worklogs).where('close_date IS NULL') || Array.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -104,7 +104,7 @@ class TasksController < ApplicationController
     redirect_to :controller => 'tasks', :action => 'activelist'
   end
 
-  # PUT /tasks/1/punch
+  # PUT /tasks/1/CLOSE
   def close
     @task = Task.find(params[:id])
     @task.close
