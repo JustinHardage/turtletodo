@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
   has_many :worklogs, :dependent => :destroy
 
   def total_time
-    worklogs.sum(&:elapsed_hours)
+    worklogs.sum(&:elapsed_time)
   end
 
   def total_hours
