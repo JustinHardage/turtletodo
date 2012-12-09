@@ -2,7 +2,7 @@ class WorklogsController < ApplicationController
   # GET /worklogs
   # GET /worklogs.json
   def index
-    @worklogs = Worklog.all(:include => :tasks)
+    @worklogs = Worklog.all(:include => :task)
 
     respond_to do |format|
       format.html # index.html.erb
