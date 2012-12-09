@@ -21,7 +21,7 @@
     <td><%= task.name %></td>
     <td><%= task.create_date.strftime("%Y-%m-%d %l:%M%p") rescue nil %></td>
     <td><%= task.total_hours %></td>
-    <td><%= link_to task.current_work_log.present? ? edit_worklog_path(Worklog.find(task.current_work_log)) : '' %></td>
+    <td><%= link_to task.current_work_log, task.current_work_log.present? ? edit_worklog_path(Worklog.find(task.current_work_log)) : '' %></td>
     <td><%= link_to 'Punch ' + task.get_punch_direction, punch_task_path(task) %></td>
     <td><%= link_to 'Close', close_task_path(task) %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
