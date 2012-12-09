@@ -86,7 +86,7 @@ class TasksController < ApplicationController
 
   # /tasks/activelist
   def activelist
-    @tasks = Task.includes(:worklogs).where('close_date IS NULL') || Array.new
+    @tasks = Task.includes(:worklogs).where('close_date IS NULL').order('rank ASC') || Array.new
 
     respond_to do |format|
       format.html # index.html.erb
