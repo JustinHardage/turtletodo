@@ -4,5 +4,6 @@
 
 <%= render :template => 'worklogs/index' %>
 
+<%= link_to 'Close', close_task_path(task) %> | 
 <%= link_to 'Show', @task %> |
 <%= link_to 'Back', tasks_path %>
