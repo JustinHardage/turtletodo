@@ -14,8 +14,8 @@
 <% @worklogs.each do |worklog| %>
   <tr>
     <td><%= worklog.task_id %></td>
-    <td><%= worklog.start_time %></td>
-    <td><%= worklog.end_time %></td>
+    <td><%= worklog.start_time.strftime("%Y-%m-%d %l:%M%p") rescue nil%></td>
+    <td><%= worklog.end_time.strftime("%Y-%m-%d %l:%M%p") rescue nil %></td>
     <td><%= worklog.elapsed_time %></td>
     <td><%= link_to 'Show', worklog %></td>
     <td><%= link_to 'Edit', edit_worklog_path(worklog) %></td>

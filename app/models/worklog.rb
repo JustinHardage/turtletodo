@@ -6,6 +6,6 @@ class Worklog < ActiveRecord::Base
     if self.start_time.nil? then return 0 end
     self.end_time = self.end_time.nil? ? DateTime.now : self.end_time 
     # self.start_time = self.start_time.nil? ? now : self.start_time
-    ((end_time - start_time) / 60).truncate
+    ((end_time - start_time) / 60 / 60 ).truncate(2)
   end
 end
