@@ -16,8 +16,8 @@
   <tr>
     <td><%= task.rank %></td>
     <td><%= task.name %></td>
-    <td><%= task.create_date.strftime("%y-%m-%d %l:%M%p") rescue nil %></td>
-    <td><%= task.close_date.strftime("%y-%m-%d %l:%M%p") rescue nil %></td>
+    <td><%= task.create_date.strftime("%Y-%m-%d %l:%M%p") rescue nil %></td>
+    <td><%= task.close_date.strftime("%Y-%m-%d %l:%M%p") rescue nil %></td>
     <td><%= task.current_work_log %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
