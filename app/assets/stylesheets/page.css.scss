@@ -67,13 +67,16 @@ table {
 			background-color: $navbarColor;
 			border: 0.2em outset $navbarBorderColor;
 			border-radius: 0.8em;
+
+			&:hover {
+				background-color: $navbarHoverColor;
+			}
+
 			a {
 				display: inline-block;
 				text-decoration: none;
 
-				&:hover {
-					background-color: $navbarHoverColor;
-				}
+
 			}
 		}
 	}
