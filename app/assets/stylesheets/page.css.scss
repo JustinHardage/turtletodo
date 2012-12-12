@@ -60,16 +60,15 @@ table {
 		li {
 			clear: both;
 			margin: 0;
-			padding: 0;
+			padding: 0.3em 0.5em;
+			margin: 0.2em 0.1em;
 			width: 10em;
 			display: inline;
 			background-color: $navbarColor;
 			border: 0.2em outset $navbarBorderColor;
 			border-radius: 0.8em;
-			* {
+			a {
 				display: inline-block;
-				padding: 0.3em 0.5em;
-				margin: 0.2em 0.1em;
 				text-decoration: none;
 
 				&:hover {
