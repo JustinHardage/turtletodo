@@ -12,7 +12,7 @@
 	<div id="navbarID">
 		<ul>
 			<li><%= link_to_unless_current("Active Tasks", activelist_task_path) {|link| content_tag('span', link, :class => 'current')}  %></li>
-			<li><%= link_to_unless_current("All Tasks", tasks_path) {|link| content_tag('span', link, :class => 'current') %></li>
+			<li><%= link_to_unless_current("All Tasks", tasks_path) {|link| content_tag('span', link, :class => 'current')} %></li>
                         <li><%= link_to_unless_current("Worklogs", worklogs_path) {|link| content_tag('span', link, :class => 'current')} %></li>
 			<li><%= link_to_unless_current("Users", users_path) {|link| content_tag('span', link, :class => 'current')} %></li>
 		</ul>
