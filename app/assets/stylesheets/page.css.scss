@@ -2,9 +2,9 @@
  colors */
 $bodyBgColor: #88BB55;
 $contentBgColor: white;
+$darkTextColor: Black;
 $lightTextColor: white;
 $navbarBgColor: PaleGreen;
-$navbarTextColor: Black;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
 $rowOdd: #C5FABA;
@@ -58,37 +58,35 @@ table {
 	list-style-type: none;
 	margin: 0.5em auto;
 	padding: 0;
+	font-size: 1.2em;
+
 	ul {
 		li {
 			clear: both;
+			display:inline;
 			margin: 0;
-			padding: 0.3em 0.5em;
-			margin: 0.2em 0.1em;
-			width: 10em;
-			display: inline-block;
-			font-size: 1.4em;
-			color: $navbarTextColor;
-			background-color: $navbarBgColor;
-			border: 0.2em outset $navbarBorderColor;
-			border-radius: 0.8em;
-
-			&:hover {
-				background-color: $navbarHoverColor;
-				color: $lightTextColor;
-			}
+			padding: 0;
 
 			a {
-				margin: -0.3em -0.5em;
+				width: 10em;
+				margin: 0.3em 0.5em;
 				display: inline-block;
 				text-decoration: none;
-				color: inherit;
-				&:hover { 
-					background-color: transparent; 
+
+				color: $darkTextColor;
+				background-color: $navbarBgColor;
+				border: 0.2em outset $navbarBorderColor;
+				border-radius: $borderRadius;
+
+				&:hover {
+					background-color: $navbarHoverColor;
+					color: $lightTextColor;
 				}
 			}
 
 			.current {
 				background-color: $currentBgColor;
+				color: $darkTextColor;
 			}
 		}
 	}
