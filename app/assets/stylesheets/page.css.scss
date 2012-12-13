@@ -71,16 +71,15 @@ table {
 			border-radius: 0.8em;
 
 			&:hover {
-				background-color: inherit;
-				color: inherit;
+				background-color: $navbarHoverColor;
 			}
 
 			a {
 				margin: -0.3em -0.5em;
 				display: inline-block;
 				text-decoration: none;
+				color: inherit;
 				&:hover { 
-					color: inherit;
 					background-color: transparent; 
 				}
 			}
