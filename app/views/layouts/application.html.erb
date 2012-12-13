@@ -12,7 +12,7 @@
 	<h1>Turtle To Do</h1>
 	<div id="navbarID">
 		<ul>
-			<li><%= link_to_unless_current("<div>Active Tasks</div>", {:controller => "tasks", :action => "activelist"}) %></li>
+			<li><%= link_to_unless_current('<div>Active Tasks</div>', {:controller => "tasks", :action => "activelist"}) %></li>
 			<li><%= link_to_unless_current("All Tasks", {:controller => "tasks", :action => "index"}) %></li>
                         <li><%= link_to_unless_current("Worklogs", {:controller => "worklogs", :action => "index"}) %></li>
 			<li><%= link_to_unless_current("Users", {:controller => "users", :action => "index"})%></li>
