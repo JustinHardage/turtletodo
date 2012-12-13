@@ -3,7 +3,8 @@
 $bodyBgColor: #88BB55;
 $contentBgColor: white;
 $lightTextColor: white;
-$navbarColor: PaleGreen;
+$navbarBgColor: PaleGreen;
+$navbarTextColor: Black;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
 $rowOdd: #C5FABA;
@@ -64,20 +65,24 @@ table {
 			margin: 0.2em 0.1em;
 			width: 10em;
 			display: inline-block;
-			background-color: $navbarColor;
+			color: $navbarTextColor;
+			background-color: $navbarBgColor;
 			border: 0.2em outset $navbarBorderColor;
 			border-radius: 0.8em;
 
 			&:hover {
-				background-color: $navbarHoverColor;
+				background-color: inherit;
+				color: inherit;
 			}
 
 			a {
 				margin: -0.3em -0.5em;
 				display: inline-block;
 				text-decoration: none;
-				&:hover { background-color: transparent; }
-
+				&:hover { 
+					color: inherit;
+					background-color: transparent; 
+				}
 			}
 		}
 	}
