@@ -67,16 +67,18 @@ table {
 			margin: 0;
 			padding: 0;
 
-			a {
+			a, .current {
 				width: 10em;
 				margin: 0.3em 0.5em;
 				display: inline-block;
 				text-decoration: none;
-
-				color: $darkTextColor;
-				background-color: $navbarBgColor;
 				border: 0.2em outset $navbarBorderColor;
 				border-radius: $borderRadius;
+				color: $darkTextColor;
+			}
+
+			a {
+				background-color: $navbarBgColor;
 
 				&:hover {
 					background-color: $navbarHoverColor;
@@ -86,7 +88,6 @@ table {
 
 			.current {
 				background-color: $currentBgColor;
-				color: $darkTextColor;
 			}
 		}
 	}
