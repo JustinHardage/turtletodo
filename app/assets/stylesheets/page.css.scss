@@ -9,6 +9,7 @@ $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
 $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
+$currentBgColor: GoldenRod;
 
 /**********************
  sizes */
@@ -84,6 +85,10 @@ table {
 				&:hover { 
 					background-color: transparent; 
 				}
+			}
+
+			.current {
+				background-color: $currentBgColor;
 			}
 		}
 	}
