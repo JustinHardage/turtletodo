@@ -11,7 +11,7 @@
 	<h1>Turtle To Do</h1>
 	<div id="navbarID">
 		<ul>
-			<li><%= link_to_unless_current("Active Tasks", activelist_task_path) {|link| content_tag('span', link, :class => 'current')}  %></li>
+			<li><%= link_to_unless_current("Active Tasks", activelist_task_path) { |link| content_tag('span', link, :class => 'current') }  %></li>
 			<li><%= link_to_unless_current("All Tasks", tasks_path) %></li>
                         <li><%= link_to_unless_current("Worklogs", worklogs_path) %></li>
 			<li><%= link_to_unless_current("Users", users_path)%></li>
