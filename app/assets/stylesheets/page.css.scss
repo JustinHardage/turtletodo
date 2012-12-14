@@ -7,6 +7,7 @@ $lightTextColor: white;
 $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
+$navbarBgImage: linear-gradient(to bottom, #FFFFFF 0%, $navbarBgColor 40%, $navbarBorderColor 100%);
 $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
 $currentBgColor: greenyellow;
@@ -95,12 +96,15 @@ hr {
 				border: 0.2em outset $navbarBorderColor;
 				border-radius: $borderRadius;
 				color: $darkTextColor;
-				font-size: 1.2em;
+				font-size: 1.1em;
+				box-shadow: 2px 2px 2px #bbb;
 			}
 
 			a {
 				background-color: $navbarBgColor;
+				background-image: $navbarBgImage;
 				text-decoration: none;
+				text-shadow: 1px 1px 1px #000;
 
 				&:hover {
 					background-color: $navbarHoverColor;
