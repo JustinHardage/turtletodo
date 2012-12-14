@@ -7,7 +7,10 @@ $lightTextColor: white;
 $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
-$navbarBgImage: linear-gradient(to bottom, #FFFFFF 0%, $navbarBgColor 40%, $navbarBorderColor 100%);
+$navbarGradients: to bottom, #FFFFFF 0%, $navbarBgColor 40%, $navbarBorderColor 100%;
+$navbarCSS3: linear-gradient($navbarGradients);
+$navbarWebkit: -webkit-linear-gradient($navbarGradients);
+$navbarMoz: -moz-linear-gradient($navbarGradients);
 $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
 $currentBgColor: greenyellow;
@@ -102,7 +105,9 @@ hr {
 
 			a {
 				background-color: $navbarBgColor;
-				background-image: $navbarBgImage;
+				background-image: $navbarWebkit;
+				background-image: $navbarMoz;
+				background-image: $navbarCSS3;
 				text-decoration: none;
 				text-shadow: 1px 1px 1px #000;
 
