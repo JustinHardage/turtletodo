@@ -8,8 +8,8 @@
 </head>
 <body>
 <div id="pageID">
-	<%= image_tag("turtle.png", :class => "logo")  %>
-	<h1>Turtle To Do</h1>
+	<%= image_tag("turtle.png", :id => "logoID")  %>
+	<h1 id="titleID">Turtle To Do</h1>
 	<div id="navbarID">
 		<ul>
 			<li><%= link_to_unless_current("Active Tasks", activelist_task_path) {|link| content_tag('span', link, :class => 'current')}  %></li>

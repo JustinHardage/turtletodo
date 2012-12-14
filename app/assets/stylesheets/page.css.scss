@@ -43,10 +43,7 @@ table {
 /**********************
  classes */
 
-.logo {
-	float: left;
-	width: 10%;
-}
+
 
 /**********************
  IDs */
@@ -59,10 +56,20 @@ table {
 	background-color: $contentBgColor;
 }
 
+#logo {
+	float: left;
+	width: 10%;
+}
+
+#titleID {
+	float: left;
+}
+
 #navbarID {
 	list-style-type: none;
 	margin: 0.5em auto;
 	padding: 0;
+	float: left;
 
 	ul {
 		li {
