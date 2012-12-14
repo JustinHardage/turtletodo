@@ -61,9 +61,11 @@ hr {
 	background-color: $contentBgColor;
 }
 
-#logo {
+#logoID {
 	float: left;
 	width: 10em;
+	margin: 0;
+	padding: 0;
 }
 
 #title_and_nav_ID {
