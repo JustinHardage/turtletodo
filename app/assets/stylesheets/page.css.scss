@@ -109,8 +109,7 @@ hr {
 				border-radius: $borderRadius;
 				color: $darkTextColor;
 				font-size: 1.1em;
-				box-shadow: 2px 2px 2px #bbb;
-							}
+			}
 
 			a {
 				background-color: $navbarBgColor;
@@ -118,7 +117,8 @@ hr {
 				background: -moz-linear-gradient($navbarGradients);
 				background: linear-gradient($navbarGradients);
 				text-decoration: none;
-				box-shadow: inset 0 0 20px $navbarBorderColor;
+				box-shadow: 2px 2px 2px #bbb, 
+					inset 0 0 20px $navbarBorderColor;
 
 
 				&:hover {
