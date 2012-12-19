@@ -4,11 +4,12 @@ $bodyBgColor: #88BB55;
 $contentBgColor: white;
 $darkTextColor: Black;
 $lightTextColor: white;
-$navbarShineColor: #FFFFFF;
+$navbarShineColor: White;
+$navbarShadowColor: DarkGreen;
 $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
-$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
+$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%, $navbarShadowColor 90%;
 $navbarCSS3: linear-gradient($navbarGradients);
 $navbarWebkit: -webkit-linear-gradient($navbarGradients);
 $navbarMoz: -moz-linear-gradient($navbarGradients);
@@ -116,7 +117,6 @@ hr {
 				background: $navbarMoz;
 				background: $navbarCSS3;
 				text-decoration: none;
-				text-shadow: 1px 1px 1px #555;
 
 				&:hover {
 					background-color: $navbarHoverColor;
