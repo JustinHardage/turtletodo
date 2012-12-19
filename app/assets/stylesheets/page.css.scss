@@ -127,6 +127,7 @@ hr {
 					background: linear-gradient($navbarInvertedGradients);
 					color: $lightTextColor;
 					text-shadow: $navbarTextGlow;
+					transition: 0.4s ease-in-out;
 				}
 			}
 
