@@ -8,7 +8,7 @@ $navbarShineColor: #FFFFFF;
 $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
-$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor;
+$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
 $navbarCSS3: linear-gradient($navbarGradients);
 $navbarWebkit: -webkit-linear-gradient($navbarGradients);
 $navbarMoz: -moz-linear-gradient($navbarGradients);
@@ -43,7 +43,6 @@ table {
 
 hr {
 	clear: both;
-	width: 80%;
 }
 
 /**********************
@@ -104,7 +103,7 @@ hr {
 				padding: $padding;
 				margin: 0.3em 0.5em;
 				display: inline-block;
-				border: 0.2em outset $navbarBorderColor;
+				border: 0.2em solid $navbarBorderColor;
 				border-radius: $borderRadius;
 				color: $darkTextColor;
 				font-size: 1.1em;
@@ -120,6 +119,7 @@ hr {
 				text-shadow: 1px 1px 1px #000;
 
 				&:hover {
+					background: none;
 					background-color: $navbarHoverColor;
 					color: $lightTextColor;
 				}
