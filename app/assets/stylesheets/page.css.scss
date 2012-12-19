@@ -4,10 +4,11 @@ $bodyBgColor: #88BB55;
 $contentBgColor: white;
 $darkTextColor: Black;
 $lightTextColor: white;
+$navbarShineColor: #FFFFFF;
 $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
-$navbarGradients: to bottom, #FFFFFF 0%, $navbarBgColor 40%, $navbarBorderColor 100%;
+$navbarGradients: to bottom, $navbarShineColor 0%, $navbarBgColor 40%, $navbarBorderColor 100%;
 $navbarCSS3: linear-gradient($navbarGradients);
 $navbarWebkit: -webkit-linear-gradient($navbarGradients);
 $navbarMoz: -moz-linear-gradient($navbarGradients);
@@ -27,10 +28,6 @@ body {
 	text-align: center;
 	background-color: $bodyBgColor;
 	font-family: Helvetica, Arial, sans-serif;
-}
-
-h1 {
-	font-family: Palatino, "Times New Roman", Serif;
 }
 
 table {
