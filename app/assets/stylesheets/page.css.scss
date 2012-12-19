@@ -9,7 +9,7 @@ $navbarShadowColor: DarkGreen;
 $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
-$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor;
+$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
 $navbarCSS3: linear-gradient($navbarGradients);
 $navbarWebkit: -webkit-linear-gradient($navbarGradients);
 $navbarMoz: -moz-linear-gradient($navbarGradients);
@@ -121,6 +121,7 @@ hr {
 				&:hover {
 					background-color: $navbarHoverColor;
 					color: $lightTextColor;
+					text-shadow: 0 0 0.2em $lightTextColor; 
 				}
 			}
 
