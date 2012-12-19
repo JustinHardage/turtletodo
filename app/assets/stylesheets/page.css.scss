@@ -4,6 +4,8 @@ $bodyBgColor: #88BB55;
 $contentBgColor: white;
 $darkTextColor: Black;
 $lightTextColor: white;
+$navbarTextGlowColor: #CCFFCC;
+$navbarTextGlow: 0 0 0.3em $navbarTextGlowColor;
 $navbarShineColor: White;
 $navbarShadowColor: DarkGreen;
 $navbarBgColor: PaleGreen;
@@ -121,7 +123,7 @@ hr {
 				&:hover {
 					background-color: $navbarHoverColor;
 					color: $lightTextColor;
-					text-shadow: 0 0 0.2em $lightTextColor; 
+					text-shadow: 0 0 0.2em $navbarTextGlow;
 				}
 			}
 
