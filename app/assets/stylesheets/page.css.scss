@@ -12,7 +12,7 @@ $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
 $navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
-$navbarInvertedGradients: top, $navbarShineColor, $navbarBorderColor 50%, $navbarBgColor 51%;
+$navbarInvertedGradients: top, $navbarShineColor, $navbarShadowColor 50%, $navbarBorderColor;
 $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
 $currentBgColor: greenyellow;
@@ -117,7 +117,7 @@ hr {
 				background: -moz-linear-gradient($navbarGradients);
 				background: linear-gradient($navbarGradients);
 				text-decoration: none;
-				box-shadow: inset 0 0 10px $navbarBorderColor;
+				box-shadow: inset 0 0 20px $navbarBorderColor;
 
 
 				&:hover {
