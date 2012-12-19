@@ -73,21 +73,20 @@ hr {
 	float: left;
 	width: 65em;
 	align: left;
+	margin: 1em;
 }
 
 #titleID {
 	float: left;
+	font-size: 1.2em;
 }
 
 #navbarID {
 	list-style-type: none;
-	margin: 0.5em auto;
 	padding: 0;
 	float: left;
 
 	ul {
-		float: left;
-
 		li {
 			clear: both;
 			display:inline;
