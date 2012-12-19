@@ -9,7 +9,7 @@ $navbarShadowColor: DarkGreen;
 $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
-$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%, $navbarShadowColor 90%;
+$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor;
 $navbarCSS3: linear-gradient($navbarGradients);
 $navbarWebkit: -webkit-linear-gradient($navbarGradients);
 $navbarMoz: -moz-linear-gradient($navbarGradients);
