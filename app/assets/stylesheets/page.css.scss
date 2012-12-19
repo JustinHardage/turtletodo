@@ -12,9 +12,7 @@ $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
 $navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
-$navbarCSS3: linear-gradient($navbarGradients);
-$navbarWebkit: -webkit-linear-gradient($navbarGradients);
-$navbarMoz: -moz-linear-gradient($navbarGradients);
+$navbarInvertedGradients: top, $navbarShineColor, $navbarBorderColor 50%, $navbarBgColor 51%;
 $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
 $currentBgColor: greenyellow;
@@ -111,19 +109,23 @@ hr {
 				color: $darkTextColor;
 				font-size: 1.1em;
 				box-shadow: 2px 2px 2px #bbb;
+				box-shadow: inset 0 0 10px #000000;
 			}
 
 			a {
 				background-color: $navbarBgColor;
-				background: $navbarWebkit;
-				background: $navbarMoz;
-				background: $navbarCSS3;
+				background: -webkit-linear-gradient($navbarGradients);
+				background: -moz-linear-gradient($navbarGradients);
+				background: linear-gradient($navbarGradients);
 				text-decoration: none;
 
 				&:hover {
 					background-color: $navbarHoverColor;
+					background: -moz-linear-gradient($navbarInvertedGradients);
+					background: -webkit-linear-gradient($navbarInvertedGradients);
+					background: linear-gradient($navbarInvertedGradients);
 					color: $lightTextColor;
-					text-shadow: 0 0 0.2em $navbarTextGlow;
+					text-shadow: $navbarTextGlow;
 				}
 			}
 
