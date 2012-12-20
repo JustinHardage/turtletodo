@@ -1,10 +1,8 @@
 /**********************
  imports */
-/*
 @import url(http://fonts.googleapis.com/css?family=Vidaloka);
 @import url(http://fonts.googleapis.com/css?family=Seymour+One);
 @import url(http://fonts.googleapis.com/css?family=Milonga);
-*/
 
 /**********************
  colors */
@@ -87,8 +85,6 @@ hr {
 /**********************
  classes */
 
-
-
 /**********************
  IDs */
 #pageID {
@@ -119,7 +115,10 @@ hr {
 
 #titleID {
 	float: left;
-	font-size: 2.5em;
+	font: {
+		family: "Seymour One", Impact, fantasy;
+		size: 2.5em;
+	}
 	margin: 0.5em 0em;
 	padding: 0;	
 }
