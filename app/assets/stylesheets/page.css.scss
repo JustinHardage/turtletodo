@@ -10,6 +10,8 @@ $bodyBgColor: #88BB55;
 $contentBgColor: White;
 $darkTextColor: Black;
 $lightTextColor: white;
+$shadowColor: #BBB;
+$boxShadow: 2px 2px 2px $shadowColor;
 $navbarTextGlowColor: #CCFFCC;
 $navbarTextGlow: 0 0 0.3em $navbarTextGlowColor;
 $navbarShineColor: White;
@@ -19,9 +21,10 @@ $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
 $navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
 $navbarInvertedGradients: top, $navbarShineColor, $navbarShadowColor 50%, $navbarBorderColor;
+$navbarCurrentColor: greenyellow;
+$navbarInsetShadow: inset 0 0 20px $navbarBorderColor;
 $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
-$currentBgColor: greenyellow;
 
 /**********************
  sizes */
@@ -60,6 +63,12 @@ $logoSize: 10em;
 	background: -webkit-linear-gradient($bkg);
 	background: -moz-linear-gradient($bkg);
 	background: linear-gradient($bkg);
+}
+
+@mixin shadow($shd...) {
+	-moz-box-shadow: $shd;
+	-webkit-box-shadow: $shd;
+	box-shadow: $shd;
 }
 
 /**********************
@@ -106,7 +115,7 @@ hr {
 	@include transition($logoTransition);
 	&:hover {
 		@include spin(359deg);
-		width: $logoSize * 1.5;
+		width: $logoSize * 1.4;
 	}
 }
 
@@ -157,8 +166,7 @@ hr {
 			a {
 				background-color: $navbarBgColor;
 				text-decoration: none;
-				box-shadow: 2px 2px 2px #bbb, 
-				inset 0 0 20px $navbarBorderColor;
+				@include shadow($boxShadow, $navbarInsetShadow);
 				@include background($navbarGradients);
 
 				&:hover {
@@ -171,7 +179,7 @@ hr {
 			}
 
 			.current {
-				background-color: $currentBgColor;
+				background-color: $navbarCurrentColor;
 			}
 		}
 	}
@@ -183,7 +191,7 @@ hr {
 
 #noticeID {
 	border: 0.5em solid $navbarHoverColor;
-	border-radius: $borderRadius;
+	@include rounded($borderRadius);
 	padding: $padding;
 	margin: $margins;
 	width: 30em;
