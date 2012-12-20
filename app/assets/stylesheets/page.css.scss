@@ -29,7 +29,7 @@ $padding: 0.5em;
 $margins: 0.5em auto;
 $borderRadius: 1em;
 $transition: 0.2s ease-out;
-$logoTransition: 4s ease-in-out;
+$logoTransition: 3s ease-out;
 
 /**********************
  mixins */
@@ -48,6 +48,8 @@ $logoTransition: 4s ease-in-out;
 }
 
 @mixin transition($trn) {
+	-ms-transition: $trn;
+	-o-transition: $trn;
 	-webkit-transition: $trn;
 	-moz-transition: $trn;
 	transition: $trn;
@@ -100,9 +102,9 @@ hr {
 	width: 10em;
 	margin: 1;
 	padding: 0;
+	@include transition($logoTransition);
 	&:hover {
 		@include spin(359deg);
-		@include transition($logoTransition);
 	}
 }
 
