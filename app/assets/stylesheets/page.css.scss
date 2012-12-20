@@ -105,6 +105,7 @@ hr {
 	@include transition($logoTransition);
 	&:hover {
 		@include spin(359deg);
+		zoom: 150%;
 	}
 }
 
