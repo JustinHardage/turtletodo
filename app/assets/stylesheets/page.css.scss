@@ -70,11 +70,11 @@ hr {
 	margin: 1;
 	padding: 0;
 	&:hover {
-		-moz-transform: rotate(360deg);
-		-webkit-transform: rotate(360deg);
-		-ms-transform: rotate(360deg);
-		-o-transform: rotate(360deg);
-		transform: rotate(360deg);
+		-moz-transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+		-ms-transform: rotate(359deg);
+		-o-transform: rotate(359deg);
+		transform: rotate(359deg);
 		-webkit-transition: $logoTransition;
 		-moz-transition: $logoTransition;
 		transition: $logoTransition;
