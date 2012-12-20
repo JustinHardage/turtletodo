@@ -1,8 +1,6 @@
 /**********************
  imports */
-@import url(http://fonts.googleapis.com/css?family=Vidaloka);
 @import url(http://fonts.googleapis.com/css?family=Seymour+One);
-@import url(http://fonts.googleapis.com/css?family=Milonga);
 
 /**********************
  colors */
@@ -19,7 +17,7 @@ $navbarShadowColor: DarkGreen;
 $navbarBgColor: PaleGreen;
 $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
-$navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
+$navbarGradients: top, $navbarShineColor, $navbarShineColor 10%, $navbarBgColor 40%, $navbarBorderColor 60%;
 $navbarInvertedGradients: top, $navbarShineColor, $navbarShadowColor 50%, $navbarBorderColor;
 $navbarCurrentColor: greenyellow;
 $navbarInsetShadow: inset 0 0 20px $navbarBorderColor;
