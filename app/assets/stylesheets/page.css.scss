@@ -1,7 +1,15 @@
 /**********************
+ imports */
+/*
+@import url(http://fonts.googleapis.com/css?family=Vidaloka);
+@import url(http://fonts.googleapis.com/css?family=Seymour+One);
+@import url(http://fonts.googleapis.com/css?family=Milonga);
+*/
+
+/**********************
  colors */
 $bodyBgColor: #88BB55;
-$contentBgColor: white;
+$contentBgColor: White;
 $darkTextColor: Black;
 $lightTextColor: white;
 $navbarTextGlowColor: #CCFFCC;
@@ -13,8 +21,6 @@ $navbarHoverColor: Green;
 $navbarBorderColor: yellowgreen;
 $navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
 $navbarInvertedGradients: top, $navbarShineColor, $navbarShadowColor 50%, $navbarBorderColor;
-$transition: 0.2s ease-out;
-$logoTransition: 4s ease-in-out;
 $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
 $currentBgColor: greenyellow;
@@ -24,6 +30,36 @@ $currentBgColor: greenyellow;
 $padding: 0.5em;
 $margins: 0.5em auto;
 $borderRadius: 1em;
+$transition: 0.2s ease-out;
+$logoTransition: 4s ease-in-out;
+
+/**********************
+ mixins */
+@mixin rounded($radius: 1em) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin spin($angle: 359deg) {
+	-moz-transform: rotate($angle);
+	-webkit-transform: rotate($angle);
+	-ms-transform: rotate($angle);
+	-o-transform: rotate($angle);
+	transform: rotate($angle);
+}
+
+@mixin transition($trn) {
+	-webkit-transition: $trn;
+	-moz-transition: $trn;
+	transition: $trn;
+}
+
+@mixin background($bkg) {
+	background: -webkit-linear-gradient($bkg);
+	background: -moz-linear-gradient($bkg);
+	background: linear-gradient($bkg);
+}
 
 /**********************
  elements */
@@ -59,9 +95,8 @@ hr {
 	width: 80em;
 	margin: $margins;
 	padding: 1em;
-	border-radius: $borderRadius;
-	-moz-border-radius: $borderRadius;
 	background-color: $contentBgColor;
+	@include rounded($borderRadius);
 }
 
 #logoID {
@@ -70,14 +105,8 @@ hr {
 	margin: 1;
 	padding: 0;
 	&:hover {
-		-moz-transform: rotate(359deg);
-		-webkit-transform: rotate(359deg);
-		-ms-transform: rotate(359deg);
-		-o-transform: rotate(359deg);
-		transform: rotate(359deg);
-		-webkit-transition: $logoTransition;
-		-moz-transition: $logoTransition;
-		transition: $logoTransition;
+		@include spin(359deg);
+		@include transition($logoTransition);
 	}
 }
 
@@ -92,8 +121,7 @@ hr {
 	float: left;
 	font-size: 2.5em;
 	margin: 0.5em 0em;
-	padding: 0;
-	
+	padding: 0;	
 }
 
 #navbarID {
@@ -118,31 +146,24 @@ hr {
 				margin: 0.3em 0.5em;
 				display: inline-block;
 				border: 0.2em solid $navbarBorderColor;
-				border-radius: $borderRadius;
+				@include rounded($borderRadius);
 				color: $darkTextColor;
 				font-size: 1.1em;
 			}
 
 			a {
 				background-color: $navbarBgColor;
-				background: -webkit-linear-gradient($navbarGradients);
-				background: -moz-linear-gradient($navbarGradients);
-				background: linear-gradient($navbarGradients);
 				text-decoration: none;
 				box-shadow: 2px 2px 2px #bbb, 
-					inset 0 0 20px $navbarBorderColor;
-
+				inset 0 0 20px $navbarBorderColor;
+				@include background($navbarGradients);
 
 				&:hover {
 					background-color: $navbarHoverColor;
-					background: -moz-linear-gradient($navbarInvertedGradients);
-					background: -webkit-linear-gradient($navbarInvertedGradients);
-					background: linear-gradient($navbarInvertedGradients);
+					@include background($navbarInvertedGradients);					
 					color: $lightTextColor;
 					text-shadow: $navbarTextGlow;
-					-moz-transition: $transition;
-					-webkit-transition: $transition;
-					transition: $transition;
+					@include transition($transition);
 				}
 			}
 
