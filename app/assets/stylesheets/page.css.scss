@@ -68,6 +68,16 @@ hr {
 	width: 10em;
 	margin: 1;
 	padding: 0;
+	&:hover {
+		-moz-transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		-webkit-transition: $transition;
+		-moz-transition: $transition;
+		transition: $transition;
+	}
 }
 
 #title_and_nav_ID {
@@ -82,14 +92,7 @@ hr {
 	font-size: 2.5em;
 	margin: 0.5em 0em;
 	padding: 0;
-	&:hover {
-		-moz-transform: rotate(180deg);
-		-webkit-transform: rotate(180deg);
-		-ms-transform: rotate(180deg);
-		-o-transform: rotate(180deg);
-		transform: rotate(180deg);
-		transition: $transition;
-	}
+	
 }
 
 #navbarID {
