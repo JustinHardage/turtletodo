@@ -14,6 +14,7 @@ $navbarBorderColor: yellowgreen;
 $navbarGradients: top, $navbarShineColor, $navbarBgColor 40%, $navbarBorderColor 60%;
 $navbarInvertedGradients: top, $navbarShineColor, $navbarShadowColor 50%, $navbarBorderColor;
 $transition: 0.2s ease-out;
+$logoTransition: 2s ease-in-out;
 $rowOdd: #C5FABA;
 $rowEven: #DCFDC8;
 $currentBgColor: greenyellow;
@@ -69,14 +70,14 @@ hr {
 	margin: 1;
 	padding: 0;
 	&:hover {
-		-moz-transform: rotate(180deg);
-		-webkit-transform: rotate(180deg);
-		-ms-transform: rotate(180deg);
-		-o-transform: rotate(180deg);
-		transform: rotate(180deg);
-		-webkit-transition: $transition;
-		-moz-transition: $transition;
-		transition: $transition;
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+		-webkit-transition: $logoTransition;
+		-moz-transition: $logoTransition;
+		transition: $logoTransition;
 	}
 }
 
