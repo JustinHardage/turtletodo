@@ -30,6 +30,7 @@ $margins: 0.5em auto;
 $borderRadius: 1em;
 $transition: 0.2s ease-out;
 $logoTransition: 3s ease-out;
+$logoSize: 10em;
 
 /**********************
  mixins */
@@ -99,13 +100,13 @@ hr {
 
 #logoID {
 	float: left;
-	width: 10em;
+	width: $logoSize;
 	margin: 1;
 	padding: 0;
 	@include transition($logoTransition);
 	&:hover {
 		@include spin(359deg);
-		zoom: 150%;
+		width: $logoSize * 1.5;
 	}
 }
 
