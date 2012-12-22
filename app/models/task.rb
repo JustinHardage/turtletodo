@@ -48,4 +48,7 @@ class Task < ActiveRecord::Base
     is_punched_out? ? "In" : "Out"
   end
 
+  def get_punch_path
+    is_punched_out? ? punch_in_task_path(self) : punch_out_task_path(self)
+  end
 end

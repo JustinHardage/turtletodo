@@ -9,6 +9,8 @@ Turtletodo::Application.routes.draw do
 
   resources :tasks
   match 'tasks/:id/punch' => 'tasks#punch', :as => :punch_task
+  match 'tasks/:id/punch_out' => 'tasks#punch_out', :as => :punch_out_task
+  match 'tasks/:id/punch_in' => 'tasks#punch_in', :as => :punch_in_task
   match 'tasks/:id/close' => 'tasks#close', :as => :close_task
 
   # resources
