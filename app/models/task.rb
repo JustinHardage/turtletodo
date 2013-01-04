@@ -18,6 +18,8 @@ class Task < ActiveRecord::Base
   end
 
   def punch_in
+    raise "Tried to punch in an already punched in task" if is_punched_in?
+
     newlog = self.worklogs.build(:start_time => DateTime.now)
     newlog.save
     self.current_work_log = newlog.id
@@ -25,7 +27,8 @@ class Task < ActiveRecord::Base
   end
 
   def punch_out
-    # throw exception if :current_work_log doesn't exist?
+    raise "Tried to punch out an already punched out task" if is_punched_out?
+
     oldlog = Worklog.find(current_work_log)
     oldlog.end_time = DateTime.now
     self.current_work_log = nil
