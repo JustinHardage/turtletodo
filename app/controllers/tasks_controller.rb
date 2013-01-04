@@ -109,6 +109,8 @@ class TasksController < ApplicationController
     @task.punch_in
 
     flash[:notice] = "Task #" + @task.id.to_s + "successfully punched in!"
+
+    redirect_to :controller => 'tasks', :action => 'activelist'
   end
 
   def punch_out
@@ -116,6 +118,8 @@ class TasksController < ApplicationController
     @task.punch_out
 
     flash[:notice] = "Task #" + @task.id.to_s + "successfully punched out!"
+
+    redirect_to :controller => 'tasks', :action => 'activelist'
   end
 
   # PUT /tasks/1/CLOSE
