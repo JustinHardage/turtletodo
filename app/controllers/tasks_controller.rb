@@ -108,14 +108,14 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.punch_in
 
-    flash[:notice] = "Task #" + @task.id_to_s + "successfully punched in!"
+    flash[:notice] = "Task #" + @task.id.to_s + "successfully punched in!"
   end
 
   def punch_out
     @task = Task.find(params[:id])
     @task.punch_out
 
-    flash[:notice] = "Task #" + @task.id_to_s + "successfully punched out!"
+    flash[:notice] = "Task #" + @task.id.to_s + "successfully punched out!"
   end
 
   # PUT /tasks/1/CLOSE
