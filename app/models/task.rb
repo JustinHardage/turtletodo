@@ -1,5 +1,6 @@
 class Task < ActiveRecord::Base
-  attr_accessible :name, :rank, :current_work_log, :create_date, :close_date
+  attr_accessible :name, :rank
+  attr_reader :current_work_log, :create_date, :close_date
   has_many :worklogs, :dependent => :destroy
 
   def total_time
@@ -48,7 +49,4 @@ class Task < ActiveRecord::Base
     is_punched_out? ? "In" : "Out"
   end
 
-  def get_punch_path
-    is_punched_out? ? punch_in_task_path(self) : punch_out_task_path(self)
-  end
 end

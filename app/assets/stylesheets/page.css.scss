@@ -169,7 +169,7 @@ hr {
 
 				&:hover {
 					background-color: $navbarHoverColor;
-					@include background($navbarInvertedGradients);					
+					@include background($navbarInvertedGradients);
 					color: $lightTextColor;
 					text-shadow: $navbarTextGlow;
 					@include transition($transition);

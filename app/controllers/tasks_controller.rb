@@ -104,6 +104,20 @@ class TasksController < ApplicationController
     redirect_to :controller => 'tasks', :action => 'activelist'
   end
 
+  def punch_in
+    @task = Task.find(params[:id])
+    @task.punch_in
+
+    flash[:notice] = "Task #" + @task.id_to_s + "successfully punched in!"
+  end
+
+  def punch_out
+    @task = Task.find(params[:id])
+    @task.punch_out
+
+    flash[:notice] = "Task #" + @task.id_to_s + "successfully punched out!"
+  end
+
   # PUT /tasks/1/CLOSE
   def close
     @task = Task.find(params[:id])
