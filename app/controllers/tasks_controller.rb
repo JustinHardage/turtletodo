@@ -108,7 +108,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.punch_in
 
-    flash[:notice] = "Task #" + @task.id.to_s + "successfully punched in!"
+    flash[:notice] = "Task #" + @task.id.to_s + " successfully punched in!"
 
     redirect_to :controller => 'tasks', :action => 'activelist'
   end
@@ -117,7 +117,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.punch_out
 
-    flash[:notice] = "Task #" + @task.id.to_s + "successfully punched out!"
+    flash[:notice] = "Task #" + @task.id.to_s + " successfully punched out!"
 
     redirect_to :controller => 'tasks', :action => 'activelist'
   end
