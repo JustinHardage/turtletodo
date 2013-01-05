@@ -1,6 +1,6 @@
 class Task < ActiveRecord::Base
   attr_accessible :name, :rank
-  attr_reader :current_work_log, :create_date, :close_date
+  :current_work_log, :create_date, :close_date
   has_many :worklogs, :dependent => :destroy
 
   def total_time
@@ -22,7 +22,7 @@ class Task < ActiveRecord::Base
 
     newlog = self.worklogs.build(:start_time => DateTime.now)
     newlog.save
-    self.current_work_log = newlog.id
+    self.current_work_log = newlog.id or raise "aaaaaaaaaa"
     self.save
   end
 
