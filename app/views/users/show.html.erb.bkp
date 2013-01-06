@@ -1,5 +1,3 @@
-<p>Disabled for security</p>
-
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +5,15 @@
   <%= @user.name %>
 </p>
 
+<p>
+  <b>Password:</b>
+  <%= 'password' %>
+</p>
 
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
