@@ -21,7 +21,7 @@ class Task < ActiveRecord::Base
 
     newlog = self.worklogs.build(:start_time => DateTime.now)
     newlog.save
-    self.current_work_log = newlog.id or raise "aaaaaaaaaa"
+    self.current_work_log = newlog.id
     self.save
   end
 
@@ -29,7 +29,8 @@ class Task < ActiveRecord::Base
     raise "Tried to punch out an already punched out task" if is_punched_out?
 
     oldlog = Worklog.find(current_work_log)
-    oldlog.end_time = DateTime.now
+    # oldlog.end_time = DateTime.now
+    oldlog.close!
     self.current_work_log = nil
     oldlog.save
     self.save

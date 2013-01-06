@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name 
-  attr_protected :password
+  attr_protected :password, :salt
 end
