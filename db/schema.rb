@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106072435) do
+ActiveRecord::Schema.define(:version => 20130107045851) do
 
   create_table "tasks", :force => true do |t|
     t.integer  "rank"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130106072435) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "salt"
+    t.boolean  "is_admin"
   end
 
   create_table "worklogs", :force => true do |t|
