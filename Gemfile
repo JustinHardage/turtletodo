@@ -26,6 +26,9 @@ end
 
 gem 'jquery-rails'
 
+# Required update on Heroku, 2014/04/05
+#gem 'psych', '>= 2.0.5'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
